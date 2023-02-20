@@ -12,9 +12,9 @@
 @media screen and (max-width: 1279px) {
     .place {
         grid-template-columns:
-            calc(440px + (460 - 440) * (100vw - 1024) / (1280 - 1024))
+            calc(440px + (460 - 440) * (100vw - 1024px) / (1280 - 1024))
             1fr;
-        column-gap: calc(32px + (40 - 32) * (100vw - 1024) / (1280 - 1024));
+        column-gap: calc(32px + (40 - 32) * (100vw - 1024px) / (1280 - 1024));
     }
 }
 
