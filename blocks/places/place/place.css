@@ -1,0 +1,36 @@
+.place {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 460px 1fr;
+    grid-template-rows: repeat(minmax(min-content, max-content));
+    grid-gap: 48px 40px;
+    grid-template-areas:
+        "title url"
+        "image text";
+}
+
+@media screen and (max-width: 1279px) {
+    .place {
+        grid-template-columns:
+            calc(440px + (460 - 440) * (100vw - 1024) / (1280 - 1024))
+            1fr;
+        column-gap: calc(32px + (40 - 32) * (100vw - 1024) / (1280 - 1024));
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .place {
+        grid-template-columns:
+            calc(340px + (440 - 340) * (100vw - 768px) / (1024 - 768))
+            1fr;
+        column-gap: calc(28px + (32 - 28) * (100vw - 768px) / (1024 - 768));
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .place {
+        display: flex;
+        flex-direction: column;
+        max-width: 320px;
+    }
+}

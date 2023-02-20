@@ -1,0 +1,28 @@
+.place__paragraphs {
+    grid-area: text;
+    max-width: 484px;
+    display: grid;
+    grid-template-rows: min-content;
+    row-gap: 26px;
+}
+
+@media screen and (max-width: 1279px) {
+    .place__paragraphs {
+        max-width: calc(456px + (484 - 456) * (100vw - 1024px) / (1280 - 1024));
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .place__paragraphs {
+        max-width: calc(352px + (456 - 352) * (100vw - 768px) / (1024 - 768));
+        row-gap: 25px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .place__paragraphs {
+        max-width: calc(288px + (352 - 288) * (100vw - 320px) / (768 - 320));
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}

@@ -1,0 +1,16 @@
+.place__website {
+    grid-area: url;
+    max-width: 456px;
+    min-height: 46px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px 0;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 767px) {
+    .place__website {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}

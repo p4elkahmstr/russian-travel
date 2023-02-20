@@ -1,0 +1,56 @@
+.cover {
+    max-width: 1184px;
+    min-height: 740px;
+    margin-left: 48px;
+    margin-right: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-image: url(../.././images/__background.png);
+    background-size: cover;
+    z-index: 0;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.cover::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-image: url(../../images/__overlay.png);
+}
+
+.cover:hover::before {
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 1279px) {
+    .cover {
+        min-height: calc(
+            640px + (740 - 640) * (100vw - 1024px) / (1280 - 1024)
+        );
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .cover {
+        min-height: calc(480px + (640 - 480) * (100vw - 768px) / (1024 - 768));
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .cover {
+        min-height: calc(200px + (480 - 200) * (100vw - 320px) / (768 - 320));
+    }
+}

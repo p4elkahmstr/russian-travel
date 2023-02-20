@@ -1,0 +1,29 @@
+.place__image {
+    object-fit: cover;
+    display: block;
+    max-width: 460px;
+    max-height: 460px;
+    grid-area: image;
+}
+
+@media screen and (max-width: 1279px) {
+    .place__image {
+        max-width: calc(440px + (460 - 440) * (100vw - 1024px) / (1280 - 1024));
+        max-height: calc(
+            440px + (460 - 440) * (100vw - 1024px) / (1280 - 1024)
+        );
+    }
+}
+@media screen and (max-width: 1023px) {
+    .place__image {
+        max-width: calc(340px + (440 - 340) * (100vw - 768px) / (1024 - 768));
+        max-height: calc(340px + (440 - 340) * (100vw - 768px) / (1024 - 768));
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .place__image {
+        max-width: calc(320px + (340 - 320) * (100vw - 320px) / (768 - 320));
+        max-height: calc(320px + (340 - 320) * (100vw - 320px) / (768 - 320));
+    }
+}
