@@ -3,6 +3,7 @@
     min-height: 18px;
     margin: 92px 48px 24px;
     display: flex;
+    flex-direction: row;
     color: #ffffff;
     justify-content: space-between;
 }
@@ -19,5 +20,6 @@
         margin-top: calc(64px + (88 - 64) * (100vw - 320px) / (768 - 320));
         margin-left: calc(16px + (24 - 16) * (100vw - 320px) / (768 - 320));
         margin-right: calc(16px + (24 - 16) * (100vw - 320px) / (768 - 320));
+        flex-direction: column;
     }
 }

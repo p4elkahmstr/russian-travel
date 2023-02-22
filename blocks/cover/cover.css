@@ -1,4 +1,5 @@
 .cover {
+    margin-top: 92px;
     max-width: 1184px;
     min-height: 740px;
     margin-left: 48px;
@@ -26,7 +27,7 @@
     width: 100%;
     height: 100%;
     z-index: 1;
-    background-image: url(../../images/__overlay.png);
+    background: rgba(42, 44, 47, 0.3);
 }
 
 .cover:hover::before {
@@ -46,11 +47,13 @@
 @media screen and (max-width: 1023px) {
     .cover {
         min-height: calc(480px + (640 - 480) * (100vw - 768px) / (1024 - 768));
+        margin-top: 90px;
     }
 }
 
 @media screen and (max-width: 767px) {
     .cover {
         min-height: calc(200px + (480 - 200) * (100vw - 320px) / (768 - 320));
+        margin-top: 66px;
     }
 }

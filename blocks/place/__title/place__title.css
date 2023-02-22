@@ -4,7 +4,6 @@
     font-weight: 900;
     font-size: 72px;
     line-height: 1.0555;
-    grid-area: title;
 }
 @media screen and (max-width: 1279px) {
     .place__title {
@@ -17,15 +16,15 @@
         max-width: calc(340px + (440 - 340) * (100vw - 768px) / (1024 - 768));
         font-size: calc(42px + (72 - 42) * (100vw - 768px) / (1024 - 768));
         line-height: 1.0952;
+        padding-right: 10px;
     }
 }
 
 @media screen and (max-width: 767px) {
     .place__title {
         max-width: calc(320px + (340 - 320) * (100vw - 320px) / (768 - 320));
-        font-size: calc(32px + (42 - 32) * (100vw - 320px) / (768 - 320));
-        line-height: 1.4;
+        font-size: 32px;
+        line-height: 1.09375;
         padding-left: 16px;
-        padding-right: 16px;
     }
 }

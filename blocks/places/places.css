@@ -1,11 +1,13 @@
 .places {
     max-width: 984px;
-    min-height: 3392px;
-    margin: 92px 148px;
+    margin: 0;
     padding: 0;
+    margin-top: 64px;
     display: grid;
     grid-template-columns: 1fr;
-    row-gap: 80px;
+    gap: 80px;
+    margin-left: 148px;
+    margin-right: 148px;
 }
 
 @media screen and (max-width: 1279px) {
@@ -14,25 +16,23 @@
         margin-right: calc(
             48px + (148 - 48) * (100vw - 1024px) / (1280 - 1024)
         );
+        max-width: calc(928px + (984 - 928) * (100vw - 1024px) / (1280 - 1024));
     }
 }
 
 @media screen and (max-width: 1023px) {
     .places {
-        margin-top: calc(88px + (92 - 88) * (100vw - 768px) / (1024 - 768));
         margin-left: calc(24px + (48 - 24) * (100vw - 768px) / (1024 - 768));
         margin-right: calc(24px + (48 - 24) * (100vw - 768px) / (1024 - 768));
-        row-gap: calc(73px + (80 - 73) * (100vw - 768px) / (1024 - 768));
-        margin-bottom: calc(90px + (92 - 90) * (100vw - 768px) / (1024 - 768));
+        max-width: calc(720px + (928 - 720) * (100vw - 768px) / (1024 - 768));
     }
 }
 
 @media screen and (max-width: 767px) {
     .places {
-        margin-top: calc(64px + (88 - 64) * (100vw - 320px) / (768 - 320));
         margin-left: 0;
         margin-right: 0;
-        max-width: 320px;
-        margin-bottom: calc(66px + (90 - 66) * (100vw - 320px) / (768 - 320));
+        max-width: calc(320px + (720 - 320) * (100vw - 320px) / (768 - 320));
+        gap: 50px;
     }
 }
